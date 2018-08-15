@@ -1,24 +1,24 @@
 Setup for Linux Mint 19 Cinnamon on Dell Inspiron 7559
 ------------------------------------------------------------------------------------------------------------------------
 
-How to fix reboot issue and prevent "GPU has fallen off the bus" error when wake up from suspend
+Fix reboot issue and prevent "GPU has fallen off the bus" error when wake up from suspend
 - sudo xed /etc/default/grub
 - GRUB_CMDLINE_LINUX_DEFAULT="quiet splash rcutree.rcu_idle_gp_delay=1 acpi_osi=! acpi_osi='Windows 2009'"
 - sudo update-grub
 
-How to install latest stable Linux kernel
+Install latest stable Linux kernel
 - sudo apt-add-repository -y ppa:teejee2008/ppa
 - sudo apt-get update
 - sudo apt-get install ukuu
 
-How to install Nvidia driver and switch to Intel driver
+Install Nvidia driver and switch to Intel driver
 - sudo apt-get purge nvidia*
 - sudo add-apt-repository ppa:graphics-drivers/ppa
 - sudo apt-get update
 - sudo apt-get install nvidia-390 nvidia-settings nvidia-prime nvidia-prime-applet
 - reboot and switch to Intel GPU using the applet
 
-How to enable Chinese Pinyin input
+Chinese Pinyin input
 - sudo apt install fcitx-config-gtk
 - Install latest 64-bit deb from https://pinyin.sogou.com/linux/?r=pinyin
 - Reboot
@@ -35,7 +35,7 @@ Open Putty without root user
 - sudo usermod -a -G dialout $USER
 - reboot
 
-PetaLinux 2017.3
+PetaLinux 2017.4
 - sudo apt install xvfb chrpath socat xterm autoconf libtool-bin zlib1g-dev libncurses5-dev libssl-dev tftpd-hpa build-essential
 - mkdir -p /opt/xilinx/PetaLinux/2017.4
 - ./petalinux-v2017.3-final-installer.run /opt/xilinx/petalinux/2017.4
